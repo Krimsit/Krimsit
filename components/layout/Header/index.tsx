@@ -9,7 +9,7 @@ import { Container, Logo, Navigations, Socials } from "./Header.styles"
 const Header: FC = () => {
   return (
     <Container>
-      <Logo src="/logos/logo.png" alt="Krimsit" primary />
+      <Logo src="/logos/logo.png" alt="Krimsit" priority />
       <Navigations>
         <Link href="">Главная</Link>
         <Link href="">Обо мне</Link>

@@ -17,7 +17,7 @@ const Footer: FC = () => {
   return (
     <Container>
       <Content>
-        <Logo src="/logos/logo-no-bg.png" alt="Krimsit" primary />
+        <Logo src="/logos/logo-no-bg.png" alt="Krimsit" priority />
         <Socials>
           <Link href="" styleType="dark">
             KrimsitDjenkis@gmail.com
