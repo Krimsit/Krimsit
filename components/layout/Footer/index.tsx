@@ -17,10 +17,7 @@ const Footer: FC = () => {
   return (
     <Container>
       <Content>
-        <Logo
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-b2b7d.appspot.com/o/logos%2Flogo_no_bg.png?alt=media&token=42f93676-7f03-4000-a5db-0896a7519743"
-          alt="Krimsit"
-        />
+        <Logo src="/logos/logo-no-bg.png" alt="Krimsit" primary />
         <Socials>
           <Link href="" styleType="dark">
             KrimsitDjenkis@gmail.com

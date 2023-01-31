@@ -9,10 +9,7 @@ import { Container, Logo, Navigations, Socials } from "./Header.styles"
 const Header: FC = () => {
   return (
     <Container>
-      <Logo
-        src="https://firebasestorage.googleapis.com/v0/b/portfolio-b2b7d.appspot.com/o/logos%2Flogo.png?alt=media&token=1cc66985-a891-4e15-88ba-bdf6132dd112"
-        alt="Krimsit"
-      />
+      <Logo src="/logos/logo.png" alt="Krimsit" primary />
       <Navigations>
         <Link href="">Главная</Link>
         <Link href="">Обо мне</Link>
