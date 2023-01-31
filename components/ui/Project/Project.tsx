@@ -22,7 +22,7 @@ const Project: FC<ProjectProps> = ({
     <Base>
       <ImageContainer noImage={!image}>
         <Image
-          src={image || "/no-image.png"}
+          src={image || "/images/no-image.png"}
           alt={title}
           fill={!!image}
           width={!image ? 80 : undefined}
