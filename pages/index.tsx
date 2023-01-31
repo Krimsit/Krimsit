@@ -1,7 +1,7 @@
 import { NextPage } from "next"
 
-const Home: NextPage = () => {
-  return <>123</>
-}
+import Home from "@modules/Home"
 
-export default Home
+const Page: NextPage = () => <Home />
+
+export default Page
