@@ -10,7 +10,8 @@ import {
   Logo,
   Socials,
   Navigations,
-  Text
+  Text,
+  Icons
 } from "./Footer.styles"
 
 import { navigations, socials, copyright, logos } from "../constants"
@@ -36,12 +37,18 @@ const Footer: FC = () => {
           <Link href={`tel:${socials.phone}`} styleType="dark">
             {socials.phone}
           </Link>
-          <Link href={socials.github} target="_blank" styleType="dark" isIcon>
-            <VscGithub />
-          </Link>
-          <Link href={socials.telegram} target="_blank" styleType="dark" isIcon>
-            <BsTelegram />
-          </Link>
+          <Icons>
+            <Link href={socials.github} target="_blank" styleType="dark" isIcon>
+              <VscGithub />
+            </Link>
+            <Link
+              href={socials.telegram}
+              target="_blank"
+              styleType="dark"
+              isIcon>
+              <BsTelegram />
+            </Link>
+          </Icons>
         </Socials>
       </Content>
       <Content>

@@ -48,6 +48,12 @@ export const Socials = styled.div`
   }
 `
 
+export const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+`
+
 export const Navigations = styled.div`
   display: flex;
   align-items: center;
