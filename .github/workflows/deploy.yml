@@ -22,8 +22,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             cd projects/Krimsit/
-            docker-compose down
-            rm -rf .next
-            rm -rf node_modules
+            docker-compose stop
             git pull origin master
             docker-compose up --build --force-recreate -d
