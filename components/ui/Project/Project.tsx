@@ -1,41 +1,31 @@
 import { FC } from "react"
-import Image from "next/image"
 
 import { ProjectProps } from "./Project.interface"
 
-import {
-  Base,
-  ImageContainer,
-  Content,
-  Title,
-  Description,
-  Techs
-} from "./Project.styles"
+import { Base, Title, Description } from "./Project.styles"
 
 const Project: FC<ProjectProps> = ({
-  image,
   title,
-  description,
-  techStack
+  techStack,
+  team,
+  responsibilities,
+  position
 }) => {
   return (
     <Base>
-      <ImageContainer noImage={!image}>
-        <Image
-          src={image || "/images/no-image.png"}
-          alt={title}
-          fill={!!image}
-          width={!image ? 80 : undefined}
-          height={!image ? 80 : undefined}
-        />
-      </ImageContainer>
-      <Content>
-        <Title>{title}</Title>
-        <Description>{description}</Description>
-        <Techs>
-          <span>Технологии: </span> {techStack.join(", ")}
-        </Techs>
-      </Content>
+      <Title>{title}</Title>
+      <Description>
+        <span>Роль: </span> {position}
+      </Description>
+      <Description>
+        <span>Обязанности: </span> {responsibilities.join(", ")}
+      </Description>
+      <Description>
+        <span>Команда: </span> {team.join(", ")}
+      </Description>
+      <Description>
+        <span>Технологии: </span> {techStack.join(", ")}
+      </Description>
     </Base>
   )
 }

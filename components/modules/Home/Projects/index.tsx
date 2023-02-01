@@ -4,47 +4,16 @@ import { Project, Title } from "@ui"
 
 import { Container, ProjectsGrid } from "./Projects.styles"
 
+import { projects } from "@modules/Projects/constants"
+
 const About: FC = () => {
   return (
     <Container>
-      <Title
-        text="Проекты"
-        description="В которых я учавствовал или тои pet-проекты"
-      />
+      <Title text={projects.title} description={projects.description} />
       <ProjectsGrid>
-        <Project
-          image="https://sun1.megafon-nn.userapi.com/s/v1/ig2/1rQ7o2HZexGFU3HzHOUTIJi83J6XvCfkCDzEUuqAxFAAC-nGlX-hFSY9fbncnRlweIJjEyjukFnB4wkxX1P7ytVA.jpg?size=200x200&quality=95&crop=572,0,1556,1556&ava=1"
-          title="test"
-          description="dest"
-          techStack={["javascript", "typescript"]}
-        />
-        <Project
-          title="test"
-          description="dest"
-          techStack={["javascript", "typescript"]}
-        />
-        <Project
-          image="https://sun1.megafon-nn.userapi.com/s/v1/ig2/1rQ7o2HZexGFU3HzHOUTIJi83J6XvCfkCDzEUuqAxFAAC-nGlX-hFSY9fbncnRlweIJjEyjukFnB4wkxX1P7ytVA.jpg?size=200x200&quality=95&crop=572,0,1556,1556&ava=1"
-          title="test"
-          description="dest"
-          techStack={["javascript", "typescript"]}
-        />
-        <Project
-          title="test"
-          description="dest"
-          techStack={["javascript", "typescript"]}
-        />
-        <Project
-          image="https://sun1.megafon-nn.userapi.com/s/v1/ig2/1rQ7o2HZexGFU3HzHOUTIJi83J6XvCfkCDzEUuqAxFAAC-nGlX-hFSY9fbncnRlweIJjEyjukFnB4wkxX1P7ytVA.jpg?size=200x200&quality=95&crop=572,0,1556,1556&ava=1"
-          title="test"
-          description="dest"
-          techStack={["javascript", "typescript"]}
-        />
-        <Project
-          title="test"
-          description="dest"
-          techStack={["javascript", "typescript"]}
-        />
+        {projects.items.slice(0, 3).map((item, index) => (
+          <Project key={`project_${index}`} {...item} />
+        ))}
       </ProjectsGrid>
     </Container>
   )

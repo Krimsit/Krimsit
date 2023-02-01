@@ -13,37 +13,37 @@ import {
   Text
 } from "./Footer.styles"
 
+import { navigations, socials, copyright, logos } from "../constants"
+
 const Footer: FC = () => {
   return (
     <Container>
       <Content>
-        <Logo src="/logos/logo-no-bg.png" alt="Krimsit" priority />
+        <Logo src={logos.noBg} alt="Krimsit" priority />
         <Socials>
-          <Link href="" styleType="dark">
-            KrimsitDjenkis@gmail.com
+          <Link href={`mailto:${socials.email}`} styleType="dark">
+            {socials.email}
           </Link>
-          <Link href="" styleType="dark">
-            +7 (930) 222-97-25
+          <Link href={`tel:${socials.phone}`} styleType="dark">
+            {socials.phone}
           </Link>
-          <Link href="#" styleType="dark" isIcon>
+          <Link href={socials.github} target="_blank" styleType="dark" isIcon>
             <VscGithub />
           </Link>
-          <Link href="#" styleType="dark" isIcon>
+          <Link href={socials.telegram} target="_blank" styleType="dark" isIcon>
             <BsTelegram />
           </Link>
         </Socials>
       </Content>
       <Content>
         <Navigations>
-          <Link href="">Главная</Link>
-          <Link href="">Обо мне</Link>
-          <Link href="">Проекты</Link>
-          <Link href="">Контакты</Link>
+          {navigations.map((item) => (
+            <Link key={item.key} href={item.href}>
+              {item.text}
+            </Link>
+          ))}
         </Navigations>
-        <Text>
-          Разработано <span>Андреем Субботиным</span> с <span>любовью</span> &{" "}
-          <span>кофе</span>.
-        </Text>
+        <Text>{copyright}</Text>
       </Content>
     </Container>
   )
