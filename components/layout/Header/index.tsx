@@ -6,21 +6,24 @@ import { BsTelegram } from "react-icons/bs"
 
 import { Container, Logo, Navigations, Socials } from "./Header.styles"
 
+import { navigations, socials, logos } from "../constants"
+
 const Header: FC = () => {
   return (
     <Container>
-      <Logo src="/logos/logo.png" alt="Krimsit" priority />
+      <Logo src={logos.default} alt="Krimsit" priority />
       <Navigations>
-        <Link href="">Главная</Link>
-        <Link href="">Обо мне</Link>
-        <Link href="">Проекты</Link>
-        <Link href="">Контакты</Link>
+        {navigations.map((item) => (
+          <Link key={item.key} href={item.href}>
+            {item.text}
+          </Link>
+        ))}
       </Navigations>
       <Socials>
-        <Link href="#" isIcon>
+        <Link href={socials.github} target="_blank" isIcon>
           <VscGithub />
         </Link>
-        <Link href="#" isIcon>
+        <Link href={socials.telegram} target="_blank" isIcon>
           <BsTelegram />
         </Link>
       </Socials>

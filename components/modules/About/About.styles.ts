@@ -21,11 +21,22 @@ export const Title = styled(BaseTitle)`
   margin-bottom: 40px;
 `
 
-export const Text = styled.p`
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
-  color: ${({ theme }) => theme.text};
+export const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: ${({ theme }) => theme.text};
+
+    span {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  }
 `
 
 export const Works = styled.div`

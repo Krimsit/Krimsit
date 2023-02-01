@@ -13,8 +13,8 @@ export const Title = styled(BaseTitle)`
 `
 
 export const Content = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px 45px;
-  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 `
