@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import Image from "next/image"
 
+import { MdMenu } from "react-icons/md"
+
 export const Container = styled.header`
   width: 100%;
   display: flex;
@@ -34,4 +36,9 @@ export const Socials = styled.div`
   display: flex;
   align-items: center;
   gap: 15px;
+`
+
+export const Open = styled(MdMenu)`
+  font-size: 32px;
+  color: ${({ theme }) => theme.text};
 `

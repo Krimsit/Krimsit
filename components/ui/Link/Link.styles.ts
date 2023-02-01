@@ -15,7 +15,6 @@ export const Content = styled(Link)<StylesBase>`
   text-decoration: none;
   position: relative;
   margin: 0;
-  padding: 0 ${({ isIcon }) => !isIcon && "10px"};
   font-weight: 500;
   font-size: ${({ isIcon }) => (!isIcon ? "20px" : "32px")};
   line-height: 26px;

@@ -6,11 +6,13 @@ import { Link } from "@ui"
 import { VscGithub } from "react-icons/vsc"
 import { BsTelegram } from "react-icons/bs"
 
-import { Container, Logo, Navigations, Socials } from "./Header.styles"
+import { HeaderProps } from "./Header.interface"
+
+import { Container, Logo, Navigations, Socials, Open } from "./Header.styles"
 
 import { navigations, socials, logos } from "../constants"
 
-const Header: FC = () => {
+const Header: FC<HeaderProps> = ({ onOpen }) => {
   const isAdaptive = useMediaQuery("(max-width:768px)")
 
   return (
@@ -39,6 +41,7 @@ const Header: FC = () => {
           <BsTelegram />
         </Link>
       </Socials>
+      {isAdaptive && <Open onClick={onOpen} />}
     </Container>
   )
 }
