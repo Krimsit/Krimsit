@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             cd projects/Krimsit/
-            docker-compose stop
-            docker system prune --all --volumes
+            docker-compose down
+            docker system prune --volumes
             git pull origin master
             docker-compose up --build --force-recreate -d
