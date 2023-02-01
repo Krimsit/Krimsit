@@ -6,7 +6,7 @@ export interface LinkProps {
   href: string
   children: ReactNode
   styleType?: StyleType
-  prefetch?: boolean
+  target?: string
   isIcon?: boolean
 }
 

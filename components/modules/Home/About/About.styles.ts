@@ -25,6 +25,7 @@ export const Avatar = styled(Image).attrs(() => ({
   width: 350,
   height: 350
 }))`
+  min-width: 350px;
   object-fit: cover;
   border-radius: 100%;
   border: 5px solid ${({ theme }) => theme.primary};

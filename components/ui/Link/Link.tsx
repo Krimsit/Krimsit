@@ -8,15 +8,11 @@ const Link: FC<LinkProps> = ({
   href,
   children,
   styleType = "base",
-  prefetch,
+  target,
   isIcon
 }) => {
   return (
-    <Content
-      styleType={styleType}
-      href={href}
-      prefetch={prefetch}
-      isIcon={isIcon}>
+    <Content styleType={styleType} href={href} target={target} isIcon={isIcon}>
       {children}
     </Content>
   )

@@ -12,85 +12,45 @@ import {
   TechsList
 } from "./About.styles"
 
+import { about, education, work_experience, skills } from "./constants"
+
 const About: FC = () => {
   return (
     <Container>
       <div>
         <Content>
-          <Title text="About Me" />
-          <Text>
-            The Generator App is an online tool that helps you to export
-            ready-made templates ready to work as your future website. It helps
-            you to combine slides, panels and other components and export it as
-            a set of static files: HTML/CSS/JS.
-          </Text>
+          <Title text={about.title} />
+          <Text>{about.text}</Text>
         </Content>
         <Content>
-          <Title text="Work Experience" />
+          <Title text={work_experience.title} />
           <Works>
-            <WorkInfo
-              title="Junior Web Developer"
-              position="Full Time"
-              workplace="Dr. Rajkumar’s Learning App"
-              date="Sep 2021 - Dec 2021"
-            />
-            <WorkInfo
-              title="Junior Web Developer"
-              position="Full Time"
-              workplace="Dr. Rajkumar’s Learning App"
-              date="Sep 2021 - Dec 2021"
-            />
-            <WorkInfo
-              title="Junior Web Developer"
-              position="Full Time"
-              workplace="Dr. Rajkumar’s Learning App"
-              date="Sep 2021 - Dec 2021"
-            />
+            {work_experience.items.map((item, index) => (
+              <WorkInfo key={`work_${index}`} {...item} />
+            ))}
           </Works>
         </Content>
         <Content>
-          <Title text="Education" />
+          <Title text={education.title} />
           <Works>
-            <WorkInfo
-              title="Junior Web Developer"
-              position="Full Time"
-              workplace="Dr. Rajkumar’s Learning App"
-              date="Sep 2021 - Dec 2021"
-            />
+            {education.items.map((item, index) => (
+              <WorkInfo key={`education_${index}`} {...item} />
+            ))}
           </Works>
         </Content>
       </div>
       <Content>
-        <Title text="Навыки" />
-        <Techs>
-          <p>Frontend:</p>
-          <TechsList>
-            <li>React</li>
-            <li>Typescript</li>
-            <li>Javascript</li>
-          </TechsList>
-        </Techs>
-        <Techs>
-          <p>Backend:</p>
-          <TechsList>
-            <li>NodeJS</li>
-            <li>ASP.NET</li>
-          </TechsList>
-        </Techs>
-        <Techs>
-          <p>DataBase:</p>
-          <TechsList>
-            <li>MongoDB</li>
-            <li>PostgresSQL</li>
-          </TechsList>
-        </Techs>
-        <Techs>
-          <p>Other:</p>
-          <TechsList>
-            <li>Docker + Docker-compose</li>
-            <li>Git</li>
-          </TechsList>
-        </Techs>
+        <Title text={skills.title} />
+        {skills.items.map((item) => (
+          <Techs key={item.title}>
+            <p>{item.title}</p>
+            <TechsList>
+              {item.items.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </TechsList>
+          </Techs>
+        ))}
       </Content>
     </Container>
   )

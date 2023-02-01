@@ -27,16 +27,17 @@ export const Title = styled.p`
 `
 
 export const AdditionalInfo = styled.div`
+  max-width: 50%;
   display: flex;
   align-items: center;
   gap: 10px;
   font-weight: 500;
   font-size: 12px;
-  line-height: 28px;
   letter-spacing: 1px;
   color: #a7a7a7;
 
   svg {
+    min-width: 24px;
     font-size: 24px;
   }
 `
