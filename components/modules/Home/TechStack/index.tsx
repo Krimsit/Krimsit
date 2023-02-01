@@ -1,14 +1,13 @@
 import { FC } from "react"
 
-import { Container, Title, TechsGrid, Tech } from "./TechStack.styles"
+import { Title } from "@ui"
+
+import { Container, TechsGrid, Tech } from "./TechStack.styles"
 
 const TechStack: FC = () => {
   return (
     <Container>
-      <Title>
-        Технологический стек
-        <span>Основные технологии</span>
-      </Title>
+      <Title text="Технологический стек" description="Основные технологии" />
       <TechsGrid>
         <Tech src="/icons/react-query.png" alt="HTML 5" />
         <Tech src="/icons/react.png" alt="HTML 5" />
