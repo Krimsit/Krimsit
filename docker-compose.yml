@@ -40,7 +40,7 @@ services:
     container_name: certbot
     image: certbot/certbot
     networks:
-      - server
+      - dev
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - .certbot/www:/var/www/certbot
