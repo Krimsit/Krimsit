@@ -8,12 +8,13 @@ export const Container = styled.header`
   gap: 0 20px;
   padding-top: 40px;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
 `
 
-export const Logo = styled(Image).attrs(() => ({
-  width: 180,
-  height: 64
-}))`
+export const Logo = styled(Image)`
   object-fit: cover;
 `
 
@@ -23,6 +24,10 @@ export const Navigations = styled.div`
   justify-content: flex-end;
   gap: 30px;
   flex: 1;
+
+  @media screen and (max-width: 768px) {
+    gap: 15px;
+  }
 `
 
 export const Socials = styled.div`

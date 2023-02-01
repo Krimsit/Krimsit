@@ -9,6 +9,11 @@ export const Container = styled.div`
   grid-template-columns: 700px auto;
   gap: 25px;
   justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 100%;
+    justify-content: flex-start;
+  }
 `
 
 export const Content = styled.section`
@@ -55,12 +60,34 @@ export const Techs = styled.div`
     color: ${({ theme }) => theme.title};
   }
 
-  &:not(:first-child) {
-    margin-top: 30px;
+  @media screen and (max-width: 1024px) {
+    justify-self: flex-start;
+    padding: 0;
+  }
+`
+
+export const TechsGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  @media screen and (max-width: 520px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
 `
 
 export const TechsList = styled.ul`
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+    margin: 0;
+  }
+
   li {
     display: flex;
     align-items: center;

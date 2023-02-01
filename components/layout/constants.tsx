@@ -1,6 +1,6 @@
 export const logos = {
   default: "/logos/logo.png",
-  noBg: "/logos/log-no-bg.png"
+  noBg: "/logos/logo-no-bg.png"
 }
 
 export const navigations = [

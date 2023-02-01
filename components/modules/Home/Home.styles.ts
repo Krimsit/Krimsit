@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-  max-width: 1160px;
-  padding: 0 20px;
+  margin: 200px 0;
   width: 100%;
-  margin: 0 auto;
-  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 
   @media screen and (max-width: 1024px) {
-    max-width: calc(100% - 40px);
+    margin: 100px 0;
   }
 `

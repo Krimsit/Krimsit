@@ -13,6 +13,24 @@ export const Base = styled.h2`
     color: ${({ theme }) => theme.text};
     font-weight: 400;
     font-size: 32px;
-    line-height: 26px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    margin-bottom: 50px;
+
+    span {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    font-size: 32px;
+    margin-bottom: 44px;
+
+    span {
+      font-size: 24px;
+    }
   }
 `

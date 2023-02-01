@@ -24,6 +24,7 @@
       "@container": ["./components/container"],
       "@container/*": ["./components/container/*"],
       "@core": ["./core"],
+      "@hooks": ["./hooks"],
       "@dto/types/*": ["./dto/types/*"],
       "@dto/hooks/*": ["./dto/hooks/*"],
       "@dto/api/*": ["./dto/api/*"]

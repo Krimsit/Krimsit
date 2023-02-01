@@ -14,12 +14,21 @@ import {
 } from "./Footer.styles"
 
 import { navigations, socials, copyright, logos } from "../constants"
+import { useMediaQuery } from "@hooks"
 
 const Footer: FC = () => {
+  const isAdaptive = useMediaQuery("(max-width:768px)")
+
   return (
     <Container>
       <Content>
-        <Logo src={logos.noBg} alt="Krimsit" priority />
+        <Logo
+          src={logos.noBg}
+          alt="Krimsit"
+          width={!isAdaptive ? 180 : 120}
+          height={64}
+          priority
+        />
         <Socials>
           <Link href={`mailto:${socials.email}`} styleType="dark">
             {socials.email}
@@ -36,13 +45,15 @@ const Footer: FC = () => {
         </Socials>
       </Content>
       <Content>
-        <Navigations>
-          {navigations.map((item) => (
-            <Link key={item.key} href={item.href}>
-              {item.text}
-            </Link>
-          ))}
-        </Navigations>
+        {!isAdaptive && (
+          <Navigations>
+            {navigations.map((item) => (
+              <Link key={item.key} href={item.href}>
+                {item.text}
+              </Link>
+            ))}
+          </Navigations>
+        )}
         <Text>{copyright}</Text>
       </Content>
     </Container>
