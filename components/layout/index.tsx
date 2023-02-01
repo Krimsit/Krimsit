@@ -1,5 +1,7 @@
 import { FC, useEffect, useState } from "react"
 
+import { useMediaQuery } from "@hooks"
+
 import Header from "./Header"
 import Footer from "./Footer"
 import Sidebar from "./Sidebar"
@@ -9,7 +11,9 @@ import { LayoutProps } from "./Layout.interface"
 import { Container } from "./Layout.styles"
 
 const Layout: FC<LayoutProps> = ({ children }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(true)
+  const isAdaptive = useMediaQuery("(max-width:768px)")
+
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const menuReducer = {
     open: () => setIsOpen(true),
@@ -27,7 +31,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <main>{children}</main>
         <Footer />
       </Container>
-      <Sidebar isOpen={isOpen} onClose={menuReducer.close} />
+      {isAdaptive && <Sidebar isOpen={isOpen} onClose={menuReducer.close} />}
     </>
   )
 }
