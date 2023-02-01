@@ -9,6 +9,7 @@ import {
   Text,
   Works,
   Techs,
+  TechsGrid,
   TechsList
 } from "./About.styles"
 
@@ -41,16 +42,18 @@ const About: FC = () => {
       </div>
       <Content>
         <Title text={skills.title} />
-        {skills.items.map((item) => (
-          <Techs key={item.title}>
-            <p>{item.title}</p>
-            <TechsList>
-              {item.items.map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </TechsList>
-          </Techs>
-        ))}
+        <TechsGrid>
+          {skills.items.map((item) => (
+            <Techs key={item.title}>
+              <p>{item.title}</p>
+              <TechsList>
+                {item.items.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </TechsList>
+            </Techs>
+          ))}
+        </TechsGrid>
       </Content>
     </Container>
   )

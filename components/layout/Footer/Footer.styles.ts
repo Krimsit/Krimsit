@@ -13,17 +13,25 @@ export const Content = styled.div`
   gap: 0 20px;
   padding-bottom: 50px;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 20px;
+  }
+
   &:first-child {
     padding-bottom: 40px;
     border-bottom: 2px solid ${({ theme }) => theme.text};
     margin-bottom: 60px;
+
+    @media screen and (max-width: 768px) {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
   }
 `
 
-export const Logo = styled(Image).attrs(() => ({
-  width: 180,
-  height: 60
-}))`
+export const Logo = styled(Image)`
   object-fit: contain;
 `
 
@@ -33,6 +41,11 @@ export const Socials = styled.div`
   flex: 1;
   justify-content: flex-end;
   gap: 15px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 export const Navigations = styled.div`

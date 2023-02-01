@@ -5,8 +5,14 @@ export const Container = styled.section`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 0 40px;
-  margin: 150px 0 400px;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 200px;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
 `
 
 export const Title = styled.h1`
@@ -15,18 +21,34 @@ export const Title = styled.h1`
   font-size: 58px;
   line-height: 70px;
   color: ${({ theme }) => theme.title};
+  margin: 0;
 
   span {
     color: ${({ theme }) => theme.primary};
   }
+
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 46px;
+    line-height: 58px;
+  }
+
+  @media screen and (max-width: 520px) {
+    font-size: 38px;
+    line-height: 50px;
+  }
 `
 
-export const Avatar = styled(Image).attrs(() => ({
-  width: 350,
-  height: 350
-}))`
+export const Avatar = styled(Image)`
   min-width: 350px;
   object-fit: cover;
   border-radius: 100%;
   border: 5px solid ${({ theme }) => theme.primary};
+
+  @media screen and (max-width: 768px) {
+    min-width: 300px;
+  }
 `

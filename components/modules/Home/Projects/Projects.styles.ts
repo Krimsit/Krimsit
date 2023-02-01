@@ -1,8 +1,6 @@
 import styled from "styled-components"
 
-export const Container = styled.section`
-  margin-bottom: 200px;
-`
+export const Container = styled.section``
 
 export const Title = styled.h2`
   text-align: center;
@@ -14,8 +12,13 @@ export const Title = styled.h2`
 `
 
 export const ProjectsGrid = styled.div`
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px 45px;
   justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 100%;
+  }
 `
