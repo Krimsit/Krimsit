@@ -4,8 +4,11 @@ networks:
   dev:
     driver: bridge
 
-services:
+volumes:
+  certbot-etc:
+  certbot-var:
 
+services:
   client:
     container_name: "client"
     build:
@@ -21,7 +24,9 @@ services:
     container_name: "server"
     image: nginx:alpine
     volumes:
-      - ./config/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf/:/etc/nginx/ssl
     ports:
       - "80:80"
       - "443:443"
@@ -30,3 +35,9 @@ services:
       - client
     networks:
       - dev
+
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/www/:/var/www/certbot
+      - ./certbot/conf/:/etc/letsencrypt
