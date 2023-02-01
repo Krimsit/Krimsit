@@ -10,6 +10,9 @@ import Layout from "@layout"
 
 const GlobalStyle = createGlobalStyle`  
   html, body, #__next {
+    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
     height: 100%;
     margin: 0;
     transition: all 0.2s ease;

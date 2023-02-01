@@ -14,7 +14,7 @@ export const Base = styled.aside<StylesBase>`
   min-height: 100vh;
   background-color: ${({ theme }) => theme.background};
   z-index: 5;
-  padding: 40px 20px 20px;
+  padding: 20px;
   transition: transform 0.3s ease;
 `
 

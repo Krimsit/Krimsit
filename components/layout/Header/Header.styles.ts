@@ -13,6 +13,7 @@ export const Container = styled.header`
 
   @media screen and (max-width: 768px) {
     justify-content: space-between;
+    padding-top: 20px;
   }
 `
 
