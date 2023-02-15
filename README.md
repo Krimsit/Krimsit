@@ -1,3 +1,4 @@
+<img src="https://plopdo.com/wp-content/uploads/2021/07/Screenshot-1-1210x642.png?crop=1" width="100%" height="350px" />
 <h1 align="center">Hi 👋, I'm Andrey Subbotin</h1>
 <h3 align="center">I'm Frontend-developer</h3>
 
