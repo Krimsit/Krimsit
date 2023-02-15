@@ -1,4 +1,4 @@
-<a href="https://krimsit.ru" target="blank"><img align="center" src="/public/logos/logo.png" alt="https://krimsit.ru" width="100%" height="500"/></a>
+<a href="https://krimsit.ru" target="blank"><img align="center" src="/public/logos/logo_banner.png" alt="https://krimsit.ru" width="100%"/></a>
 <h1 align="center">Hi 👋, I'm Andrey Subbotin</h1>
 <h3 align="center">I'm Frontend-developer</h3>
 
