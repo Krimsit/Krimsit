@@ -1,23 +1,3 @@
-<style>
-    .block {
-        margin-bottom: 50px;
-    }
-
-    .stack {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .github {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        align-items: flex-start;
-        margin-bottom: 20px;
-    }
-</style>
-
 <h1 align="center">Hi 👋, I'm Andrey Subbotin</h1>
 <h3 align="center">I'm Frontend-developer</h3>
 
