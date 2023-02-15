@@ -1,4 +1,4 @@
-<img src="https://plopdo.com/wp-content/uploads/2021/07/Screenshot-1-1210x642.png?crop=1" width="100%" height="350px" />
+<a href="https://krimsit.ru" target="blank"><img align="center" src="/public/logos/logo.png" alt="https://krimsit.ru" width="100%" height="500"/></a>
 <h1 align="center">Hi 👋, I'm Andrey Subbotin</h1>
 <h3 align="center">I'm Frontend-developer</h3>
 
@@ -6,7 +6,6 @@
     <h3>Connect with me:</h3>
     <div class="stack">
         <a href="https://instagram.com/krimsit" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="krimsit" height="30" width="40" /></a>
-        <a href="/https://krimsit.ru" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://krimsit.ru" height="30" width="40" /></a>
     </div>
 </div>
 
